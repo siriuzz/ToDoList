@@ -1,21 +1,20 @@
-# Security Policy
+#  Política de Seguridad
 
-## Supported Versions
+## Versiones Soportadas
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Usa esta sección para informar a las personas sobre qué versiones de tu proyecto
+están siendo actualmente soportadas con actualizaciones de seguridad.
 
-| Version | Supported          |
+
+| Versión | Supportado         |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 1.0 x   | :white_check_mark: |
 
-## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+## Reportar Vulnerabilidades
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Si descubres una vulnerabilidad de seguridad en este proyecto, por favor sigue los siguientes pasos para reportarla de manera responsable:
+
+1. **No crees un issue público**. Las vulnerabilidades deben ser reportadas de manera privada para evitar que se exploten antes de que se pueda desarrollar una solución.
+2. **Reporte Privado de Vulnerabilidades**: Si está habilitado, usa la opción de "Reportar una vulnerabilidad" en la pestaña de Seguridad de nuestro repositorio.
+3. **Security Advisories (Avisos de Seguridad)**: GitHub proporciona una función para reportar vulnerabilidades llamada "Security Advisories". Si tienes permiso (por ejemplo, si eres un colaborador), puedes crear un borrador de aviso de seguridad.
