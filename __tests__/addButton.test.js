@@ -2,11 +2,11 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
-import AddButton from '@/components/AddButton';
+import AddButton from '@/app/components/AddButton';
 
 describe('AddButton', () => {
   it('renders the button', () => {
-    render(<AddButton action={() => {}} />);
+    render(<AddButton action={() => { }} />);
 
     const button = screen.getByText('Add Note');
     expect(button).toBeInTheDocument();
