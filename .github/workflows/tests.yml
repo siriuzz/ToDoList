@@ -1,0 +1,22 @@
+name: Tests
+on: 
+  pull_request:
+    branches:
+      - qa
+
+jobs:
+    run-tests:
+        runs-on: ubuntu-lastest
+        steps:
+        - name: Code Checkout
+          uses: actions/checkout@v4  
+
+        - name: Node Setup
+          uses: actions/setup-node@v4
+          with:
+            node-version: 20
+
+        - name: Run Test Command
+          run: npm test
+
+        
