@@ -4,14 +4,21 @@ import TodoList from "./components/TodoList";
 import AddButton from './components/AddButton';
 import ListItem from './models/ListItemModel';
 
-
 const Home = () => {
   const [newNoteText, setNewNoteText] = useState("")
   const [items, setItems] = useState([]);
+  const [warning, setWarning] = useState("");
+
   const handleAddButton = () => {
+    if (newNoteText.trim() === "") {
+      // Show a warning when the task text is empty
+      setWarning("Task text is empty. Please, add a name to the task.");
+      return;
+    }
     const listItem = new ListItem(newNoteText);
     setItems([...items, listItem]); // Append the new item to the existing array
     setNewNoteText("");
+    setWarning(""); // Reset warning
   }
   const handleDeleteItem = (index) => {
     const updatedItems = items.filter((_, i) => i !== index);
@@ -20,6 +27,7 @@ const Home = () => {
 
   const handleInputChange = (event) => {
     setNewNoteText(event.target.value);
+    setWarning(""); // Reset warning on typing
   }
 
   const handleCheckboxChange = (index) => {
@@ -46,14 +54,17 @@ const Home = () => {
         />
         <AddButton action={handleAddButton} />
       </div>
+      {warning && (
+        <div className="text-red-500 text-center mb-4">
+          {warning}
+        </div>
+      )}
       <TodoList
         items={items}
         onCheckboxChange={handleCheckboxChange}
         onDeleteItem={handleDeleteItem}
       />
-
     </div>
-
   );
 }
 export default Home;
