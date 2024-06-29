@@ -15,7 +15,7 @@ describe('Home', () => {
     render(<Home />);
     
     const input = screen.getByPlaceholderText('Insert text');
-    const addButton = screen.getByText('Add Note');
+    const addButton = screen.getByText('Add Task');
 
     // Add a task
     fireEvent.change(input, { target: { value: 'Test Task 1' } });
@@ -30,5 +30,17 @@ describe('Home', () => {
 
     // Verify the task is removed
     expect(screen.queryByText('Test Task 1')).not.toBeInTheDocument();
+  });
+
+  it('Shows empty task warning', () => {
+    render(<Home />);
+    
+    const addButton = screen.getByText('Add Task');
+
+    // Add a task
+    fireEvent.click(addButton);
+
+    // Verify the task is added
+    expect(screen.getByText('Task is empty. Please, add a name to the task.')).toBeInTheDocument();
   });
 });

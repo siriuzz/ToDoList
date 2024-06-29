@@ -12,7 +12,7 @@ const Home = () => {
   const handleAddButton = () => {
     if (newNoteText.trim() === "") {
       // Show a warning when the task text is empty
-      setWarning("Task text is empty. Please, add a name to the task.");
+      setWarning("Task is empty. Please, add a name to the task.");
       return;
     }
     const listItem = new ListItem(newNoteText);
