@@ -33,6 +33,11 @@ Ejecutar el siguiente comando
 npm tests
 ```
 
+# CI/CD
+El proceso de CI/CD consiste en dos workflows principales:
+- CodeQL: Herramienta de escaneo de código para verificación de la seguridad. Este workflow se ejecuta en todos los pull requests del repositorio.
+- Tests: Workflow de pruebas de componentes utilizando Jest. Solo se ejecuta cuando se realiza un pull request a la rama `qa`
+
 # Contribuidores
 
 - siriuzz
