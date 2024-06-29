@@ -8,14 +8,17 @@ jobs:
     run-tests:
         runs-on: ubuntu-latest
         steps:
+        # Clona el repositorio en el ambiente virtual de GitHub Actions
         - name: Code Checkout
           uses: actions/checkout@v4  
-
+        
+        # Realiza el setup de Node en Ubuntu con la versión 20
         - name: Node Setup
           uses: actions/setup-node@v4
           with:
             node-version: 20
-
+        
+        #Instala las dependencias y ejecuta los tests
         - name: Run Test Command
           run: npm install && npm test
 
