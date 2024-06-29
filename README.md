@@ -27,7 +27,11 @@ Luego, abrir [http://localhost:3000](http://localhost:3000) en su navegador de p
 
 # Como ejecutar las pruebas
 
-**En progreso**
+Ejecutar el siguiente comando
+
+```bash
+npm tests
+```
 
 # Contribuidores
 
