@@ -17,6 +17,6 @@ jobs:
             node-version: 20
 
         - name: Run Test Command
-          run: npm test
+          run: npm install && npm test
 
         
