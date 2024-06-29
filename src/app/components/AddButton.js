@@ -5,7 +5,7 @@ const AddButton = ({ action }) => {
     return (
         <div>
             <button onClick={action} className="p-2 bg-blue-500 rounded-md">
-                Add Note
+                Add Task
             </button>
         </div>
     )

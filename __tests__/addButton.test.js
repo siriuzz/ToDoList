@@ -8,7 +8,7 @@ describe('AddButton', () => {
   it('renders the button', () => {
     render(<AddButton action={() => { }} />);
 
-    const button = screen.getByText('Add Note');
+    const button = screen.getByText('Add Task');
     expect(button).toBeInTheDocument();
   });
 
@@ -16,7 +16,7 @@ describe('AddButton', () => {
     const action = jest.fn();
     render(<AddButton action={action} />);
 
-    const button = screen.getByText('Add Note');
+    const button = screen.getByText('Add Task');
     fireEvent.click(button);
 
     expect(action).toHaveBeenCalledTimes(1);
