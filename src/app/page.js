@@ -13,6 +13,11 @@ const Home = () => {
     setItems([...items, listItem]); // Append the new item to the existing array
     setNewNoteText("");
   }
+  const handleDeleteItem = (index) => {
+    const updatedItems = items.filter((_, i) => i !== index);
+    setItems(updatedItems);
+  };
+  
 
   const handleInputChange = (event) => {
     setNewNoteText(event.target.value);
@@ -42,7 +47,12 @@ const Home = () => {
         />
         <AddButton action={handleAddButton} />
       </div>
-      <TodoList items={items} onCheckboxChange={handleCheckboxChange} />
+      <TodoList
+        items={items}
+        onCheckboxChange={handleCheckboxChange}
+        onDeleteItem={handleDeleteItem}
+      />
+
     </div>
 
   );
